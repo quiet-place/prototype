@@ -16,6 +16,7 @@
 		97EAFFB527FD5C3E005A9AB6 /* prototypeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAFFB427FD5C3E005A9AB6 /* prototypeUITestsLaunchTests.swift */; };
 		97EAFFC227FD5C94005A9AB6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 97EAFFC127FD5C94005A9AB6 /* .gitignore */; };
 		97EAFFC527FD5DBC005A9AB6 /* raven.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAFFC427FD5DBC005A9AB6 /* raven.swift */; };
+		E15E588627FD601100564CBC /* dale.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E588527FD601100564CBC /* dale.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		97EAFFB427FD5C3E005A9AB6 /* prototypeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prototypeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		97EAFFC127FD5C94005A9AB6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		97EAFFC427FD5DBC005A9AB6 /* raven.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = raven.swift; sourceTree = "<group>"; };
+		E15E588527FD601100564CBC /* dale.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dale.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		97EAFF9627FD5C3C005A9AB6 /* prototype */ = {
 			isa = PBXGroup;
 			children = (
+				E15E588427FD5FFC00564CBC /* dale */,
 				97EAFFC327FD5D57005A9AB6 /* raven */,
 				97EAFF9727FD5C3C005A9AB6 /* prototypeApp.swift */,
 				97EAFF9927FD5C3C005A9AB6 /* ContentView.swift */,
@@ -139,6 +142,14 @@
 				97EAFFC427FD5DBC005A9AB6 /* raven.swift */,
 			);
 			path = raven;
+			sourceTree = "<group>";
+		};
+		E15E588427FD5FFC00564CBC /* dale */ = {
+			isa = PBXGroup;
+			children = (
+				E15E588527FD601100564CBC /* dale.swift */,
+			);
+			path = dale;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +286,7 @@
 				97EAFF9A27FD5C3C005A9AB6 /* ContentView.swift in Sources */,
 				97EAFF9827FD5C3C005A9AB6 /* prototypeApp.swift in Sources */,
 				97EAFFC527FD5DBC005A9AB6 /* raven.swift in Sources */,
+				E15E588627FD601100564CBC /* dale.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
