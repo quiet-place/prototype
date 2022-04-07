@@ -72,10 +72,17 @@ struct Home: View {
                         WebView(url: page.url)
                             .frame(height: 250)
                             .cornerRadius(15)
-                        
-                        //Long Press gesture => 수정 삭제 메뉴(show menu)
-                            .onLongPressGesture(minimumDuration: 2, maximumDistance: 1){
-                                isComplete.toggle()
+                            .contextMenu{
+                                Button{
+                                    print("Update selected")
+                                }label:{
+                                    Label("Update", systemImage: "pencil")
+                                }
+                                Button{
+                                    print("Delete selected")
+                                }label:{
+                                    Label("Delete", systemImage: "trash")
+                                }
                             }
                             
                     }
