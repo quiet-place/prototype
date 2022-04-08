@@ -8,30 +8,22 @@
 import SwiftUI
 
 struct ListView: View {
+    let data = Array(1...100).map { "ahrfhr \($0)" }
+    let columns = Array(repeating: GridItem(.flexible(), spacing: 45), count: 2)
     var body: some View {
         NavigationView {
             ScrollView {
                 HStack(alignment: .top) {
-                    /*
-                    LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(data, id: \.self) {i in
-                            Text(i)
-                        }
-                    }*/
-                
-                    LazyVStack {
-                        ForEach(0..<10) { i in
-                            leafRow()
-                        }
-                    }
-                    LazyVStack {
-                        ForEach(0..<10) { i in
-                            leafRow()
+                    HStack(alignment: .top) {
+                        
+                        LazyVGrid(columns: columns, spacing: 20) {
+                            ForEach(data, id: \.self) {i in
+                                leafRow()
+                            }
                         }
                     }
                 }
             }
-            .navigationTitle("Tree Name")
         }
     }
 }
