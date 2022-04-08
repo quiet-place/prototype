@@ -11,11 +11,26 @@ struct leafRow: View {
     let thumb = ["sample1", "sample2", "sample3"]
     var body: some View {
         VStack {
-            //Image(systemName: "leaf") // thumbnail
             Image(thumb[Int.random(in: 0...2)])
                 .resizable()
                 .scaledToFit()
+                .frame(width: 160)
+                .cornerRadius(10)
+            Text("miribogi_text_miri")
+                .lineLimit(1)
+            HStack {
+                Text("March 3, 2022")
+                Image(systemName: "drop.circle.fill")
+                Image(systemName: "flame.circle.fill")
+            }
+        }
+        /*
+        VStack {
+            Image(thumb[Int.random(in: 0...2)])
+                .resizable()
+                .scaledToFill()
                 .frame(width: 130, height: 130)
+                .clipped()
             Text("miribogi_text_miri")
                 .lineLimit(1)
             HStack {
@@ -28,6 +43,7 @@ struct leafRow: View {
             .foregroundColor(.green)
             .opacity(0.8))
         .padding(10)
+         */
     }
 }
 
