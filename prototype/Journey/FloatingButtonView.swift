@@ -51,7 +51,7 @@ struct FloatingButtonView: View {
 
 struct FloatingButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        FloatingButtonView()
     }
 }
 
