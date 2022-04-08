@@ -42,11 +42,14 @@ struct header: View {
 
                     searchBar(text: self.$text)
                     
+                    ListView()
+                    
                     Spacer()
                     HStack{
                         Spacer()
                         uploadButton()
                     }.padding()
+                        .frame(width: 360, height: 0)
                     
 
                 }
