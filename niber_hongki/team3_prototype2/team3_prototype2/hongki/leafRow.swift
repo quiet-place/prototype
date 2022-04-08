@@ -20,8 +20,6 @@ struct leafRow: View {
                 .lineLimit(1)
             HStack {
                 Text("March 3, 2022")
-                Image(systemName: "drop.circle.fill")
-                Image(systemName: "flame.circle.fill")
             }
         }
         /*
