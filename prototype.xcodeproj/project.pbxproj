@@ -172,17 +172,9 @@
 				E15E589E27FECCE800564CBC /* LongPressGestureView.swift */,
 				E15E589527FEB7E300564CBC /* ViewModel */,
 				E15E589427FEB7D900564CBC /* View */,
-				E15E588927FDDF5B00564CBC /* Model */,
 				E15E589627FEB81700564CBC /* Page.swift */,
 			);
 			path = dale;
-			sourceTree = "<group>";
-		};
-		E15E588927FDDF5B00564CBC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		E15E589427FEB7D900564CBC /* View */ = {
