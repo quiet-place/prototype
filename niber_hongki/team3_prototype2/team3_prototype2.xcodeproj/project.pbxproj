@@ -19,6 +19,7 @@
 		6E9037B127FEC7AF006712F6 /* contentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9037B027FEC7AF006712F6 /* contentList.swift */; };
 		6E9037B327FEC94D006712F6 /* treeInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9037B227FEC94D006712F6 /* treeInformation.swift */; };
 		6E9037B627FECDB1006712F6 /* uploadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9037B527FECDB1006712F6 /* uploadButton.swift */; };
+		6E9037B9280011F7006712F6 /* homeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9037B8280011F7006712F6 /* homeButton.swift */; };
 		A0F365BE27FEDC6A00E5CBE7 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F365BD27FEDC6A00E5CBE7 /* ListView.swift */; };
 		A0F365C027FEDCB000E5CBE7 /* leafRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F365BF27FEDCB000E5CBE7 /* leafRow.swift */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,7 @@
 		6E9037B027FEC7AF006712F6 /* contentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = contentList.swift; sourceTree = "<group>"; };
 		6E9037B227FEC94D006712F6 /* treeInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = treeInformation.swift; sourceTree = "<group>"; };
 		6E9037B527FECDB1006712F6 /* uploadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uploadButton.swift; sourceTree = "<group>"; };
+		6E9037B8280011F7006712F6 /* homeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeButton.swift; sourceTree = "<group>"; };
 		A0F365BD27FEDC6A00E5CBE7 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		A0F365BF27FEDCB000E5CBE7 /* leafRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = leafRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				6E9037B527FECDB1006712F6 /* uploadButton.swift */,
+				6E9037B8280011F7006712F6 /* homeButton.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				6E90378227FD635D006712F6 /* ContentView.swift in Sources */,
 				6E9037B627FECDB1006712F6 /* uploadButton.swift in Sources */,
 				6E90378027FD635D006712F6 /* team3_prototype2App.swift in Sources */,
+				6E9037B9280011F7006712F6 /* homeButton.swift in Sources */,
 				6E9037AA27FD662F006712F6 /* header.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
