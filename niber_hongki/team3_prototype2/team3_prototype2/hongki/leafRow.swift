@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct leafRow: View {
+    let thumb = ["sample1", "sample2", "sample3"]
     var body: some View {
         VStack {
-            Image(systemName: "leaf") // thumbnail
-                
+            //Image(systemName: "leaf") // thumbnail
+            Image(thumb[Int.random(in: 0...2)])
                 .resizable()
-                .frame(width: 130, height: 130) // 패딩껴서 두개의 스택이 들어가게
+                .scaledToFit()
+                .frame(width: 130, height: 130)
             Text("miribogi_text_miri")
                 .lineLimit(1)
             HStack {
@@ -23,7 +25,9 @@ struct leafRow: View {
             }
         }
         .background(RoundedRectangle(cornerRadius: 10)
-            .foregroundColor(.accentColor))
+            .foregroundColor(.green)
+            .opacity(0.8))
+        .padding(10)
     }
 }
 

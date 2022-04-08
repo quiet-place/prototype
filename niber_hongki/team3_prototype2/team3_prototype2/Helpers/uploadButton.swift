@@ -14,7 +14,6 @@ struct uploadButton: View {
             Image("plus.circle")
         }
         .buttonStyle(PlainButtonStyle())
-        .navigationTitle("backck")
         
     }
     

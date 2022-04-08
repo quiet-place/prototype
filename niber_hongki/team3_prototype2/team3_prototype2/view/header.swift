@@ -46,6 +46,7 @@ struct header: View {
                     
                     Spacer()
                     HStack{
+                        homeButton()
                         Spacer()
                         uploadButton()
                     }.padding()
