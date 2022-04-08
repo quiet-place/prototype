@@ -19,49 +19,6 @@ struct Home: View {
     
     var body: some View {
         VStack{
-            //Custom Picker...
-            HStack{
-                Image(systemName: "eyeglasses")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(pageData.selectedTab == "private" ? .black : .white)
-                    .frame(width: 80, height: 45)
-                    .background(Color.white.opacity(pageData.selectedTab == "private" ? 1 : 0))
-                    .cornerRadius(10)
-                    .onTapGesture{
-                        withAnimation{
-                            pageData.selectedTab = "private"
-                        }
-                    }
-                
-                Text("1")
-                    .frame(width: 35, height: 35)
-                    .background(RoundedRectangle(cornerRadius: 8).stroke(Color.black, lineWidth: 3))
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(pageData.selectedTab == "tabs" ? .black : .white)
-                    .frame(width: 80, height: 45)
-                    .background(Color.white.opacity(pageData.selectedTab == "tabs" ? 1 : 0))
-                    .cornerRadius(10)
-                    .onTapGesture{
-                        withAnimation{
-                            pageData.selectedTab = "tabs"
-                        }
-                    }
-                
-                Image(systemName: "eyeglasses")
-                    .font(.system(size: 24, weight: .bold))
-                    .foregroundColor(pageData.selectedTab == "device" ? .black : .white)
-                    .frame(width: 80, height: 45)
-                    .background(Color.white.opacity(pageData.selectedTab == "device" ? 1 : 0))
-                    .cornerRadius(10)
-                    .onTapGesture{
-                        withAnimation{
-                            pageData.selectedTab = "device"
-                        }
-                    }
-            }
-            .background(Color.white.opacity(0.15))
-            .cornerRadius(15)
-            .padding(.top)
             
             ScrollView{
                 
