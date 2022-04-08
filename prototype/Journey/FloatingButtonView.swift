@@ -55,50 +55,50 @@ struct FloatingButtonView_Previews: PreviewProvider {
     }
 }
 
-// Custom Half Sheet Modifier.....
-extension View {
-    
-    // Binding Show Variable...
-    func halfSheet<SheetView: View>(showSheet: Binding<Bool>,@ViewBuilder sheetView: @escaping ()->SheetView)->some View {
-        
-        // why we using overlay or background
-        // bcz it will automatically use the swiftui frame Size only....
-        return self
-            .background(
-                HalfSheetHelper(sheetView: sheetView(),showSheet: showSheet)
-            )
-    }
-}
-
-// UIkit Intergration...
-struct HalfSheetHelper<SheetView: View>: UIViewControllerRepresentable {
-    
-    var sheetView: SheetView
-    @Binding var showSheet: Bool
-    
-    let controller = UIViewController()
-    
-    func makeUIViewController(context: Context) -> UIViewController {
-        
-        controller.view.backgroundColor = .clear
-        
-        return controller
-    }
-    
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-        
-        if showSheet {
-            // Pressentin Modal View....
-            
-            let sheetController = UIHostingController(rootView: sheetView)
-            
-            uiViewController.present(sheetController, animated: true) {
-                
-                DispatchQueue.main.async {
-                    self.showSheet.toggle()
-                }
-            }
-        }
-    }
-}
+//// Custom Half Sheet Modifier.....
+//extension View {
+//
+//    // Binding Show Variable...
+//    func halfSheet<SheetView: View>(showSheet: Binding<Bool>,@ViewBuilder sheetView: @escaping ()->SheetView)->some View {
+//
+//        // why we using overlay or background
+//        // bcz it will automatically use the swiftui frame Size only....
+//        return self
+//            .background(
+//                HalfSheetHelper(sheetView: sheetView(),showSheet: showSheet)
+//            )
+//    }
+//}
+//
+//// UIkit Intergration...
+//struct HalfSheetHelper<SheetView: View>: UIViewControllerRepresentable {
+//
+//    var sheetView: SheetView
+//    @Binding var showSheet: Bool
+//
+//    let controller = UIViewController()
+//
+//    func makeUIViewController(context: Context) -> UIViewController {
+//
+//        controller.view.backgroundColor = .clear
+//
+//        return controller
+//    }
+//
+//    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
+//
+//        if showSheet {
+//            // Pressentin Modal View....
+//
+//            let sheetController = UIHostingController(rootView: sheetView)
+//
+//            uiViewController.present(sheetController, animated: true) {
+//
+//                DispatchQueue.main.async {
+//                    self.showSheet.toggle()
+//                }
+//            }
+//        }
+//    }
+//}
 
