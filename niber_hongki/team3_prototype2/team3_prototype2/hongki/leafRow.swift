@@ -14,7 +14,7 @@ struct leafRow: View {
             Image(thumb[Int.random(in: 0...2)])
                 .resizable()
                 .scaledToFit()
-                .frame(width: 160)
+                .frame(width: .infinity)
                 .cornerRadius(10)
             Text("miribogi_text_miri")
                 .lineLimit(1)
@@ -22,6 +22,8 @@ struct leafRow: View {
                 Text("March 3, 2022")
             }
         }
+        .padding()
+        
         /*
         VStack {
             Image(thumb[Int.random(in: 0...2)])
