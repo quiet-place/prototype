@@ -22,5 +22,6 @@ class PageViewModel: ObservableObject{
         Page(url: URL(string: "https://www.naver.com")!),
         Page(url: URL(string: "https://www.naver.com")!),
         Page(url: URL(string: "https://www.naver.com")!),
+        Page(url: URL(string: "https://www.naver.com")!),
     ]
 }

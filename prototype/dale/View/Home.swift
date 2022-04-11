@@ -68,32 +68,55 @@ struct Home: View {
     @State var showSheet: Bool = false
     
     //Columns..
-    let columns = Array(repeating: GridItem(.flexible(), spacing: 45), count: 2)
+    let columns = Array(repeating: GridItem(.flexible(), spacing: 45), count: 3)
     
     var body: some View {
         ZStack {
+            GeometryReader { geometry in
+            Path { path in
+            path.move(to: CGPoint(x: 0, y: -100))
+            path.addLine(to: CGPoint(x: 0, y: 1000))
+            path.addLine(to: CGPoint(x: 490, y: 1000))
+            path.addLine(to: CGPoint(x: 490, y: -100))
+            }
+            .fill(
+            .linearGradient(
+            Gradient(colors: [.yellow, .mint]),
+            startPoint: .init(x: 0, y: 0),
+            endPoint: .init(x: 1, y: 0.5)
+            )
+            )
+            }
         VStack {
             // header
-            ScrollView {
-                VStack() {
+            
+            NavigationLink(destination: treeinfo()){
+                VStack{
                     Image("logo")
                         .frame(width: 80, height: 80)
                         .clipShape(Circle())
                         .overlay {
                             Circle().stroke(.white, lineWidth: 2)
                         }
-                        .background(Color.green)
+                       // .background(Color.green)
                         .clipShape(Circle())
                         .shadow(radius: 3)
-                        
-                    Spacer()
-                }.navigationBarTitleDisplayMode(.inline)
+                    Text("tree title")
+                        .font(.title2)
+                        .foregroundColor(.black)
+                    
+                }
                 
+            }
+                
+            Spacer()
             
+            ScrollView {
+                VStack() {
                 LazyVGrid(columns: columns, spacing: 20, content: {
                     ForEach(pageData.urls){page in
                         WebView(url: page.url)
-                            .frame(height: 250)
+                            .frame(width:130, height: 200)
                             .cornerRadius(15)
                             .contextMenu {
                                 
@@ -113,23 +136,24 @@ struct Home: View {
                     }
                 })
                 .padding()
+                }
             }
             
-            VStack {
-                // Spacer: 최대한 해당 축으로 밀어낸다
-                Spacer()
                 HStack {
                     Spacer()
                     Button(action: {
                         // show Sheet toggle
                         showSheet.toggle()
+                        
+                        
                     }, label: {
-                        Image(systemName: "plus")
-                            .font(.largeTitle)
-                            .frame(width: 50, height: 50)
-                            .background(Color.brown)
-                            .clipShape(Circle())
-                            .foregroundColor(.white)
+                        Image("plus.app")
+//                        Image(systemName: "plus")
+//                            .font(.largeTitle)
+//                            .frame(width: 40, height: 40)
+//                            .background(Color.brown)
+//                            .clipShape(Circle())
+//                            .foregroundColor(.white)
                     })
                         .padding()
                     .shadow(radius: 5)
@@ -142,12 +166,16 @@ struct Home: View {
                         }
                         
                     }
-                }
-            }
+                
+            
             
         }
+            
+        }.navigationBarTitleDisplayMode(.inline)
+
+          
         .frame(maxWidth: .infinity,maxHeight: .infinity)
-        .background(Color.green.ignoresSafeArea(.all, edges: .all))
+        //.background(Color.green.ignoresSafeArea(.all, edges: .all))
         }
     }
 }
