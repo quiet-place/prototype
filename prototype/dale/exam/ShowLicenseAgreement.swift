@@ -9,6 +9,15 @@ import SwiftUI
 
 struct ShowLicenseAgreement: View {
     @State private var isShowingSheet = false
+    
+    @State var name: String = "나무이름 입력"
+    enum Category: String, CaseIterable, Identifiable {
+        case health, life, culture
+        var id: Self { self }
+    }
+
+    @State private var selectedCategory: Category = .life
+    
     var treedata: Treedata
     
     var body: some View {
@@ -45,6 +54,29 @@ struct ShowLicenseAgreement: View {
                             .frame(width: 50, height: 50)
                     })
                 }
+                
+                TextField("나무이름 입력", text: $name)
+                .multilineTextAlignment(.center)
+                //.textFieldStyle(.roundedBorder)
+                .clipShape(Rectangle())
+                .frame(width: 200, height: 50, alignment:.center)
+                .foregroundColor(Color.black)
+                .background(Color.brown)
+                .cornerRadius(15)
+                
+                
+                //Category
+                Picker("Category", selection: $selectedCategory) {
+                        ForEach(Category.allCases) { category in
+                            Text(category.rawValue.capitalized)
+                        }
+                    }.pickerStyle(.segmented)
+                    .padding()
+                
+                //Text
+                Text("나무와 함께 성장해 보아요")
+                
+                
                 
                 Button("나무 생성하기",
                        action: { isShowingSheet.toggle() })
