@@ -10,13 +10,20 @@ import SwiftUI
 struct ShowLicenseAgreement: View {
     @State private var showingSheet: Bool = false
     
-    @State var name: String = "나무이름 입력"
+    @State var name: String = ""
+    @State var content: String = ""
     enum Category: String, CaseIterable, Identifiable {
         case health, life, culture
         var id: Self { self }
     }
+    
+    enum Range: String, CaseIterable, Identifiable {
+        case 전체공개, 그룹내공개, 비공개
+        var id: Self { self }
+    }
 
     @State private var selectedCategory: Category = .life
+    @State private var selectedRange: Range = .그룹내공개
     
     var treeData = ["cactus", "palmTree", "tree"]
     
@@ -78,17 +85,18 @@ struct ShowLicenseAgreement: View {
                 }
                 .padding()
                 
-                TextField("나무이름 입력", text: $name)
+                TextField("나무에게 이름을 지어주세요.", text: $name)
                 .multilineTextAlignment(.center)
                 //.textFieldStyle(.roundedBorder)
                 .clipShape(Rectangle())
-                .frame(width: 200, height: 50, alignment:.center)
+                .frame(width: 230, height: 50, alignment:.center)
                 .foregroundColor(Color.black)
                 .background(Color.brown)
                 .cornerRadius(15)
                 
                 
                 //Category
+                Text("나무의 카테고리를 선택해주세요.")
                 Picker("Category", selection: $selectedCategory) {
                         ForEach(Category.allCases) { category in
                             Text(category.rawValue.capitalized)
@@ -96,9 +104,23 @@ struct ShowLicenseAgreement: View {
                     }.pickerStyle(.segmented)
                     .padding()
                 
-                Text("나무와 함께 성장해 보아요\n")
+                Text("나무의 공개범위를 선택해주세요.")
+                Picker("Range", selection: $selectedRange) {
+                        ForEach(Range.allCases) { range in
+                            Text(range.rawValue.capitalized)
+                        }
+                    }.pickerStyle(.segmented)
+                    .padding()
+                
+                
+                
+
+                
+                
+                TextField("우리들 나무는 무엇인가요?", text: $content)
+                    .multilineTextAlignment(.center)
                     .clipShape(Rectangle())
-                    .frame(width: 300, height: 200, alignment:.center)
+                    .frame(width: 300, height: 150, alignment:.center)
                     .foregroundColor(Color.white)
                     .background(Color.mint)
                     .cornerRadius(15)
