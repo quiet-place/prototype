@@ -18,6 +18,7 @@
 		97EAFFC227FD5C94005A9AB6 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 97EAFFC127FD5C94005A9AB6 /* .gitignore */; };
 		97EAFFCC27FEE276005A9AB6 /* tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAFFCB27FEE276005A9AB6 /* tree.swift */; };
 		97EAFFCE27FEE29A005A9AB6 /* forest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97EAFFCD27FEE29A005A9AB6 /* forest.swift */; };
+		D7406144280555660025072E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7406143280555660025072E /* SwiftUIView.swift */; };
 		D77B7C662800129E00ECC8FD /* FloatingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77B7C652800129E00ECC8FD /* FloatingButtonView.swift */; };
 		E15E589727FEB81700564CBC /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E589627FEB81700564CBC /* Page.swift */; };
 		E15E589927FEB8C800564CBC /* PageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E15E589827FEB8C800564CBC /* PageViewModel.swift */; };
@@ -63,6 +64,7 @@
 		97EAFFC127FD5C94005A9AB6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		97EAFFCB27FEE276005A9AB6 /* tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tree.swift; sourceTree = "<group>"; };
 		97EAFFCD27FEE29A005A9AB6 /* forest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = forest.swift; sourceTree = "<group>"; };
+		D7406143280555660025072E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		D77B7C652800129E00ECC8FD /* FloatingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButtonView.swift; sourceTree = "<group>"; };
 		E15E589627FEB81700564CBC /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		E15E589827FEB8C800564CBC /* PageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewModel.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				D77B7C652800129E00ECC8FD /* FloatingButtonView.swift */,
+				D7406143280555660025072E /* SwiftUIView.swift */,
 			);
 			path = Journey;
 			sourceTree = "<group>";
@@ -354,6 +357,7 @@
 			files = (
 				97EAFF9A27FD5C3C005A9AB6 /* ContentView.swift in Sources */,
 				97EAFFCE27FEE29A005A9AB6 /* forest.swift in Sources */,
+				D7406144280555660025072E /* SwiftUIView.swift in Sources */,
 				97CC5FCB28001FBC008B9C52 /* ForestView.swift in Sources */,
 				E15E589D27FEC6AA00564CBC /* WebView.swift in Sources */,
 				E15E58AA280453FB00564CBC /* treeinfo.swift in Sources */,

@@ -18,7 +18,10 @@ struct ShowLicenseAgreement: View {
 
     @State private var selectedCategory: Category = .life
     
-    var treedata: Treedata
+    var treeData = ["cactus", "palmTree", "tree"]
+    
+    @State var i: Int = 1
+    
     
     var body: some View {
         Button(action: {
@@ -28,16 +31,33 @@ struct ShowLicenseAgreement: View {
         }
         .fullScreenCover(isPresented: $showingSheet) {
             VStack {
-                Text(treedata.name)
+                HStack {
+                    Spacer()
+                    
+                    Button(action: {
+                        self.showingSheet = false
+                    }, label: {
+                        Image(systemName: "clear")
+                            .frame(width: 100, height: 100)
+                    })
+                    .padding()
+                    
+                }
+                
                 
                 HStack{
                     Button(action: {
-                        //여기에 이미지 바꾸는 액션 넣기
+                        if i > 0 {
+                            self.i -= 1
+                        } else {
+                            i = treeData.count - 1
+                        }
+                        
                     }, label: {
                         Image(systemName: "arrowtriangle.left.fill").resizable()
                             .frame(width: 50, height: 50)
                     })
-                    treedata.image
+                    Image(treeData[i])
                         .frame(width: 150, height: 150)
                         .clipShape(Circle())
                         .overlay {
@@ -48,6 +68,12 @@ struct ShowLicenseAgreement: View {
                         .shadow(radius: 3)
                     
                     Button(action: {
+                        if i < treeData.count - 1 {
+                            self.i += 1
+                        } else {
+                            i = 0
+                        }
+                        
                     }, label: {
                         Image(systemName: "arrowtriangle.right.fill").resizable()
                             .frame(width: 50, height: 50)
@@ -75,10 +101,16 @@ struct ShowLicenseAgreement: View {
                 //Text
                 Text("나무와 함께 성장해 보아요")
                 
+                    
+                    Button("생성",
+                           action: { self.showingSheet = false })
+                    .padding()
+    
+                    
+                    
+                    
                 
                 
-                Button("나무 생성하기",
-                       action: { self.showingSheet = false })
             }
         }
     }
@@ -90,6 +122,6 @@ struct ShowLicenseAgreement: View {
 
 struct ShowLicenseAgreement_Previews: PreviewProvider {
     static var previews: some View {
-        ShowLicenseAgreement(treedata: treedatas[2])
+        ShowLicenseAgreement()
     }
 }
