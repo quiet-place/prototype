@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct Treedata: Hashable, Codable {
-    public var name: String
+    var name: String
 
     private var imageName: String
     var image: Image {

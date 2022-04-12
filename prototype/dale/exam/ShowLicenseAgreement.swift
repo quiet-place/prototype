@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ShowLicenseAgreement: View {
     @State private var isShowingSheet = false
-    //var treedata: Treedata
+    var treedata: Treedata
     
     var body: some View {
         Button(action: {
@@ -20,7 +20,7 @@ struct ShowLicenseAgreement: View {
         .sheet(isPresented: $isShowingSheet,
                onDismiss: didDismiss) {
             VStack {
-                //Text(treedata.name)
+                Text(treedata.name)
                 
                 HStack{
                     Button(action: {
@@ -29,8 +29,7 @@ struct ShowLicenseAgreement: View {
                         Image(systemName: "arrowtriangle.left.fill").resizable()
                             .frame(width: 50, height: 50)
                     })
-                    
-                    Image("logo")
+                    treedata.image
                         .frame(width: 150, height: 150)
                         .clipShape(Circle())
                         .overlay {
@@ -60,7 +59,6 @@ struct ShowLicenseAgreement: View {
 
 struct ShowLicenseAgreement_Previews: PreviewProvider {
     static var previews: some View {
-        ShowLicenseAgreement()
-        //treedata: treedata[0]
+        ShowLicenseAgreement(treedata: treedatas[2])
     }
 }

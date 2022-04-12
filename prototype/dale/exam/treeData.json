@@ -1,23 +1,14 @@
-/* 
-  treeData.json
-  prototype
-
-  Created by 김혜수 on 2022/04/11.
-  
-*/
-{
-    [
-        {
-            "name" : "선인장",  // value: String
-            "imageName" : "cactus"            // value: String
-        },
-        {
-            "name" : "야자수",    // value: String
-            "imageName" : "palmTree"            // value: String
-        },
-        {
-            "name" : "나무",    // value: String
-            "imageName" : "tree"            // value: String
-        }
-    ]
-}
+[
+    {
+        "name" : "선인장",
+        "imageName" : "cactus"
+    },
+    {
+        "name" : "야자수",
+        "imageName" : "palmTree"
+    },
+    {
+        "name" : "나무",
+        "imageName" : "tree"
+    }
+]

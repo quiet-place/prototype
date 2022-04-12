@@ -7,7 +7,7 @@
 
 import Foundation
 
-var treedata: [Treedata] = load("treeData.json")
+var treedatas: [Treedata] = load("treeData.json")
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data
@@ -30,3 +30,4 @@ func load<T: Decodable>(_ filename: String) -> T {
         fatalError("Couldn't parse \(filename) as \(T.self):\n\(error)")
     }
 }
+
