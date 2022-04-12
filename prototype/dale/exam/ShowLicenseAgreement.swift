@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ShowLicenseAgreement: View {
-    @State private var isShowingSheet = false
+    @State private var showingSheet: Bool = false
     
     @State var name: String = "나무이름 입력"
     enum Category: String, CaseIterable, Identifiable {
@@ -22,12 +22,11 @@ struct ShowLicenseAgreement: View {
     
     var body: some View {
         Button(action: {
-            isShowingSheet.toggle()
+            self.showingSheet = true
         }) {
             Text("ground의 나무생성하기(+)")
         }
-        .sheet(isPresented: $isShowingSheet,
-               onDismiss: didDismiss) {
+        .fullScreenCover(isPresented: $showingSheet) {
             VStack {
                 Text(treedata.name)
                 
@@ -79,7 +78,7 @@ struct ShowLicenseAgreement: View {
                 
                 
                 Button("나무 생성하기",
-                       action: { isShowingSheet.toggle() })
+                       action: { self.showingSheet = false })
             }
         }
     }
