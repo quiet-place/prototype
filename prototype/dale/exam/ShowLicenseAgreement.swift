@@ -38,12 +38,9 @@ struct ShowLicenseAgreement: View {
                         self.showingSheet = false
                     }, label: {
                         Image(systemName: "clear")
-                            .frame(width: 100, height: 100)
+                            .frame(width: 100, height: 8)
                     })
-                    .padding()
-                    
                 }
-                
                 
                 HStack{
                     Button(action: {
@@ -63,7 +60,7 @@ struct ShowLicenseAgreement: View {
                         .overlay {
                             Circle().stroke(.white, lineWidth: 2)
                         }
-                        .background(Color.green)
+                        .background(Color.yellow)
                         .clipShape(Circle())
                         .shadow(radius: 3)
                     
@@ -79,6 +76,7 @@ struct ShowLicenseAgreement: View {
                             .frame(width: 50, height: 50)
                     })
                 }
+                .padding()
                 
                 TextField("나무이름 입력", text: $name)
                 .multilineTextAlignment(.center)
@@ -98,18 +96,23 @@ struct ShowLicenseAgreement: View {
                     }.pickerStyle(.segmented)
                     .padding()
                 
-                //Text
-                Text("나무와 함께 성장해 보아요")
-                
-                    
-                    Button("생성",
-                           action: { self.showingSheet = false })
+                Text("나무와 함께 성장해 보아요\n")
+                    .clipShape(Rectangle())
+                    .frame(width: 300, height: 200, alignment:.center)
+                    .foregroundColor(Color.white)
+                    .background(Color.mint)
+                    .cornerRadius(15)
                     .padding()
-    
-                    
-                    
-                    
                 
+                Button(action: {
+                    self.showingSheet = false
+                }, label: {
+                    Image("shovel")
+                        .resizable().frame(width: 40, height: 40)
+                    .frame(width: 50, height: 50).padding()
+                }).overlay{
+                    Circle().stroke(.yellow, lineWidth: 3)
+                }
                 
             }
         }
